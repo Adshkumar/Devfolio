@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+:root {
+  --bg-page: #f5f3ef;
+  --bg-surface: #fffcf8;
+  --bg-surface-soft: #f2efe9;
+  --bg-card: #f8f5f1;
+  --text: #2b2a28;
+  --text-strong: #171716;
+  --text-soft: #46423d;
+  --text-muted: #686057;
+  --text-subtle: #8a8179;
+  --border: rgba(35, 31, 27, 0.12);
+  --primary: #1a7438;
+  --inverse: #f7f5f2;
+  --shadow: rgba(15, 23, 42, 0.06);
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+}
+
+:root[data-theme='dark'] {
+  --bg-page: #111111;
+  --bg-surface: #171717;
+  --bg-surface-soft: #1d1d1d;
+  --bg-card: #121212;
+  --text: #d8d3ce;
+  --text-strong: #f5f2ee;
+  --text-soft: #d5d0c8;
+  --text-muted: #a7a09a;
+  --text-subtle: #7f7a73;
+  --border: rgba(255, 255, 255, 0.08);
+  --primary: #7be0a3;
+  --inverse: #111111;
+  --shadow: rgba(0, 0, 0, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.bg-page { background: var(--bg-page); }
+.bg-surface { background: var(--bg-surface); }
+.bg-surface-soft { background: var(--bg-surface-soft); }
+.bg-card { background: var(--bg-card); }
+.text-text { color: var(--text); }
+.text-strong { color: var(--text-strong); }
+.text-soft { color: var(--text-soft); }
+.text-muted { color: var(--text-muted); }
+.text-subtle { color: var(--text-subtle); }
+.text-primary { color: var(--primary); }
+.text-inverse { color: var(--inverse); }
+.border-line { border-color: var(--border); }
+.bg-strong { background: var(--text-strong); }
+.border-primary\/60 { border-color: rgba(26, 116, 56, 0.6); }
